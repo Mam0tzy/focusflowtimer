@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>FocusFlow Timer | Best Free Pomodoro Timer for Productivity</title>
+    <meta name="description" content="Boost your productivity with FocusFlow Timer - a beautiful, free Pomodoro timer. Customize work sessions and breaks to maximize your focus and efficiency.">
+    <meta name="keywords" content="pomodoro timer, productivity timer, focus timer, study timer, work timer, time management">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="FocusFlow Timer | Best Free Pomodoro Timer">
+    <meta property="og:description" content="Boost your productivity with this beautiful, customizable Pomodoro timer. Perfect for study, work, and focus sessions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://focusflow-timer.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Existing Font and Style links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebApplication",
+        "name": "FocusFlow Timer",
+        "description": "A free Pomodoro timer application for improving productivity and focus",
+        "applicationCategory": "Productivity Software",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>FocusFlow Timer</h1>
+        <button id="settings-btn" class="settings-btn">⚙️</button>
+        <div class="timer-container">
+            <div class="timer">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="timer-circle"></div>
+        </div>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div class="mode-selector">
+            <button class="mode-btn active" data-time="25" data-type="pomodoro">Pomodoro</button>
+            <button class="mode-btn" data-time="5" data-type="short">Short Break</button>
+            <button class="mode-btn" data-time="15" data-type="long">Long Break</button>
+        </div>
+    </div>
+
+    <!-- Add settings modal -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <h2>Timer Settings</h2>
+            <div class="settings-group">
+                <label>
+                    Pomodoro Length (minutes):
+                    <input type="number" id="pomodoro-length" min="1" max="60" value="25">
+                </label>
+                <label>
+                    Short Break Length (minutes):
+                    <input type="number" id="short-break-length" min="1" max="30" value="5">
+                </label>
+                <label>
+                    Long Break Length (minutes):
+                    <input type="number" id="long-break-length" min="1" max="45" value="15">
+                </label>
+            </div>
+            <div class="modal-buttons">
+                <button id="save-settings">Save</button>
+                <button id="close-settings">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
